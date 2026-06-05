@@ -103,7 +103,7 @@ function displayResults(data) {
     for (const [key, elementId] of Object.entries(tabMap)) {
         const element = document.getElementById(elementId);
         if (element) {
-            element.innerText = data[key] || 'No data available for this section';
+            element.innerText = cleanResponse(data[key] || 'No data available for this section');
         }
     }
 }
