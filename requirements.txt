@@ -6,3 +6,4 @@ langgraph
 langchain
 fastapi
 langchain-groq
+python-multipart
