@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WealthAdvisor - AI Financial Intelligence Dashboard</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo-icon">📊</div>
+                <h1>WealthAdvisor</h1>
+            </div>
+            <p class="tagline">AI-Powered Financial Intelligence</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Input Section -->
+        <div class="input-section">
+            <h2>Ask Your Wealth Advisor</h2>
+            <p>Query about stocks, portfolio analysis, SIP investments, or retirement planning</p>
+
+            <form id="queryForm">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="queryInput"
+                        placeholder="e.g., 'Analyze Tesla stock' or 'Calculate SIP for 5000 per month for 5 years'"
+                        required
+                    />
+                    <input
+                        type="file"
+                        id="portfolioFile"
+                        accept=".csv"
+                    />
+                    <button type="submit" id="submitBtn">Analyze</button>
+                </div>
+            </form>
+
+            <div id="errorAlert" class="error-alert"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section">
+            <div class="tab-navigation">
+                <button class="tab-button active" data-tab="stock">Stock Analysis</button>
+                <button class="tab-button" data-tab="portfolio">Portfolio</button>
+                <button class="tab-button" data-tab="sip">SIP Calculator</button>
+                <button class="tab-button" data-tab="retirement">Retirement Plan</button>
+                <button class="tab-button" data-tab="risk">Risk Profile</button>
+                <button class="tab-button" data-tab="advice">Final Advice</button>
+            </div>
+
+            <div id="stock" class="tab-content active">
+                <div class="result-card">
+                    <h3>Stock Analysis</h3>
+                    <div class="result-text" id="stock-text"></div>
+                </div>
+            </div>
+
+            <div id="portfolio" class="tab-content">
+                <div class="result-card">
+                    <h3>Portfolio Analysis</h3>
+                    <p>Upload a CSV file and ask "Analyze my portfolio"</p>
+                    <div class="result-text" id="portfolio-text"></div>
+                </div>
+            </div>
+
+            <div id="sip" class="tab-content">
+                <div class="result-card">
+                    <h3>SIP Calculation</h3>
+                    <div class="result-text" id="sip-text"></div>
+                </div>
+            </div>
+
+            <div id="retirement" class="tab-content">
+                <div class="result-card">
+                    <h3>Retirement Plan</h3>
+                    <div class="result-text" id="retirement-text"></div>
+                </div>
+            </div>
+
+            <div id="risk" class="tab-content">
+                <div class="result-card">
+                    <h3>Risk Profile</h3>
+                    <div class="result-text" id="risk-text"></div>
+                </div>
+            </div>
+
+            <div id="advice" class="tab-content">
+                <div class="result-card">
+                    <h3>Professional Wealth Advisor Recommendation</h3>
+                    <div class="result-text" id="advice-text"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Tips -->
+        <div id="quickTips" class="quick-tips">
+            <div class="tip-card">
+                <div class="tip-icon">💹</div>
+                <h3>Stock Analysis</h3>
+                <p>Ask about individual stocks like "Tesla" or "Apple"</p>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-icon">📈</div>
+                <h3>SIP Calculator</h3>
+                <p>Plan investments like "5000 per month for 5 years"</p>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-icon">💰</div>
+                <h3>Portfolio Analysis</h3>
+                <p>Ask for "portfolio analysis" for detailed insights</p>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-icon">🎯</div>
+                <h3>Retirement Planning</h3>
+                <p>Ask about "retirement plan" for future planning</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>WealthAdvisor • Powered by AI • Used ChatGroq</p>
+    </footer>
+<script src="/public/script.js"></script>
+</body>
+</html>

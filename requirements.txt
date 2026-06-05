@@ -1,0 +1,8 @@
+yfinance
+uvicorn
+python-dotenv
+pandas
+langgraph
+langchain
+fastapi
+langchain-groq
