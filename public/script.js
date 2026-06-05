@@ -1,5 +1,5 @@
 // API Configuration
-const API_URL = 'http://localhost:8000/wealth';
+const API_URL = 'https://ai-wealth-agent.onrender.com';
 
 // DOM Elements
 const queryForm = document.getElementById('queryForm');
